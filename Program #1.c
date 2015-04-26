@@ -4,10 +4,10 @@
  *															*
  *  	This source file will edit data of user information *
  *	: Password, Account information,Personal information,	*
- *	Preference, and answer question.						*										
+ *	Preference, and answer question.						*
  *															*
  *	Created by: Veerapat Ma(Ped) ID:55070503445	section:D	*
- *	Team: MVP												* 
+ *	Team: MVP												*
  *	    Date: 27 April 2013									*
  ***********************************************************/
 
@@ -21,13 +21,13 @@
  *	    This function use to confirm the user that really   *
  *	want to edit his/her data.      		                *
  ***********************************************************/
-int chooseYesNo()
+int chooseNoYes()
 {
 	char input[MAXINPUT];
-	char sure; 
+	char sure;
 	do
 		{
-		printf("Are you sure to change this data?(' Y ' or ' N '): ");
+		printf("Are you sured to change this data?(' Y ' or ' N '): ");
 		fgets(input,MAXINPUT,stdin);
 		sscanf(input,"%c",&sure);
 		}
@@ -57,7 +57,7 @@ void passwordEdit(ACCOUNT_T* account)
 		printf("New password is %s \n",account->password);
 		}
 	else
-		printf("Cancel edit password\n");			
+		printf("Cancel edit password\n");
 }
 
 /************************************************************
@@ -79,7 +79,7 @@ void nameSurnameAccountIntEdit(PERSONALINFORMATION_T* personInfo)
 		printf("New name and surname is %s %s \n",personInfo->name,personInfo->surname);
 		}
 	else
-		printf("Cancel edit name and surname\n");	
+		printf("Cancel edit name and surname\n");
 }
 
 /************************************************************
@@ -101,7 +101,7 @@ void nicknameIntEdit(PERSONALINFORMATION_T* personInfo)
 		printf("New nickname is%s\n",personInfo->nickname);
 		}
 	else
-		printf("Cancel edit nickname\n");	
+		printf("Cancel edit nickname\n");
 }
 
 /************************************************************
@@ -123,7 +123,7 @@ void telNumberAccountIntEdit(PERSONALINFORMATION_T* personInfo)
 			printf("New telephone is %s\n",personInfo->telNumber);
 			}
 		else
-			printf("Cancel edit telephone number\n");	
+			printf("Cancel edit telephone number\n");
 }
 
 /************************************************************
@@ -145,7 +145,7 @@ void emailAccountIntEdit(PERSONALINFORMATION_T* personInfo)
 		printf("New E-mail is %s\n",personInfo->email);
 		}
 	else
-		printf("Cancel edit E-mail\n");	
+		printf("Cancel edit E-mail\n");
 }
 
 /************************************************************
@@ -165,9 +165,9 @@ void birthdateAccountIntEdit(PERSONALINFORMATION_T* personInfo)
 		{
 		strcpy(personInfo->birthdate,input);
 		printf("New birthdate is %s",personInfo->birthdate);
-		}	
+		}
 	else
-		printf("Cancel edit birthdate\n");	
+		printf("Cancel edit birthdate\n");
 }
 
 /************************************************************
@@ -184,11 +184,11 @@ void nationalityPersonalIntEdit(PERSONALINFORMATION_T* personInfo)
 	retval = chooseYesNo();
 	if(retval=1)
 		{
-		strcpy(personInfo->nationality,nationality[choose-1]);	
-		printf("New nationality is %s",personInfo->nationality);	
+		strcpy(personInfo->nationality,nationality[choose-1]);
+		printf("New nationality is %s",personInfo->nationality);
 		}
 	else
-		printf("Cancel edit nationality\n");	
+		printf("Cancel edit nationality\n");
 }
 
 /************************************************************
@@ -206,10 +206,10 @@ void religionPersonalIntEdit(PERSONALINFORMATION_T* personInfo)
 	if(retval=1)
 		{
 		strcpy(personInfo->religion,religion[choose-1]);
-		printf("New religion is %s",personInfo->religion);	
+		printf("New religion is %s",personInfo->religion);
 		}
 	else
-		printf("Cancel edit religion\n");	
+		printf("Cancel edit religion\n");
 }
 
 /************************************************************
@@ -226,7 +226,7 @@ void firstLanguagePersonalEdit(PERSONALINFORMATION_T* personInfo)
 	retval = chooseYesNo();
 	if(retval=1)
 		{
-		strcpy(personInfo->firstLanguage,firstLanguage[choose-1]);	
+		strcpy(personInfo->firstLanguage,firstLanguage[choose-1]);
 		printf("New first language is %s",personInfo->firstLanguage);
 		}
 	else
@@ -268,7 +268,7 @@ void cityPersonalIntEdit(PERSONALINFORMATION_T* personInfo)
 	retval = chooseYesNo();
 	if(retval=1)
 		{
-		strcpy(personInfo->city,city[choose-1]);	
+		strcpy(personInfo->city,city[choose-1]);
 		printf("New city is %s",personInfo->city);
 		}
 	else
@@ -289,7 +289,7 @@ void occupationPersonalIntEdit(PERSONALINFORMATION_T* personInfo)
 	retval = chooseYesNo();
 	if(retval=1)
 		{
-		strcpy(personInfo->occupation,occupation[choose-1]);	
+		strcpy(personInfo->occupation,occupation[choose-1]);
 		printf("New occupation is %s",personInfo->occupation);
 		}
 	else
@@ -310,7 +310,7 @@ void netIncomePersonalIntEdit(PERSONALINFORMATION_T* personInfo)
 	retval = chooseYesNo();
 	if(retval=1)
 		{
-		strcpy(personInfo->netIncome,netIncome[choose-1]);	
+		strcpy(personInfo->netIncome,netIncome[choose-1]);
 		printf("New net income is %s",personInfo->netIncome);
 		}
 	else
@@ -331,7 +331,7 @@ void maritalStatusPersonalIntEdit(PERSONALINFORMATION_T* personInfo)
 	retval = chooseYesNo();
 	if(retval=1)
 		{
-		strcpy(personInfo->maritalStatus,maritalStatus[choose-1]);	
+		strcpy(personInfo->maritalStatus,maritalStatus[choose-1]);
 		printf("New marital status is %s",personInfo->maritalStatus);
 		}
 	else
@@ -339,7 +339,7 @@ void maritalStatusPersonalIntEdit(PERSONALINFORMATION_T* personInfo)
 }
 
 /************************************************************
- *	    This function will ask user to choose number        *      
+ *	    This function will ask user to choose number        *
  *	of children.                                            *
  *  Argument                                                *
  *      personInfo - pointer that point to personInfo stuct *
@@ -352,7 +352,7 @@ void childrenPersonalIntEdit(PERSONALINFORMATION_T* personInfo)
 	retval = chooseYesNo();
 	if(retval=1)
 		{
-		strcpy(personInfo->children,children[choose-1]);	
+		strcpy(personInfo->children,children[choose-1]);
 		printf("New children is %s\n",personInfo->children);
 		}
 	else
@@ -360,7 +360,7 @@ void childrenPersonalIntEdit(PERSONALINFORMATION_T* personInfo)
 }
 
 /************************************************************
- *	    This function will ask user to input height         *      
+ *	    This function will ask user to input height         *
  *	of the user.                                            *
  *  Argument                                                *
  *      personInfo - pointer that point to personInfo stuct *
@@ -374,15 +374,15 @@ void heightPreEdit(PERSONALINFORMATION_T* personInfo)
 	retval = chooseYesNo();
 	if(retval=1)
 		{
-		sscanf(input,"%d",&preference->height);	
+		sscanf(input,"%d",&preference->height);
 		printf("New height is %d\n",personInfo->height);
 		}
 	else
-		printf("Cancel edit height\n");	
+		printf("Cancel edit height\n");
 }
 
 /************************************************************
- *	    This function will ask user to choose shape         *      
+ *	    This function will ask user to choose shape         *
  *	of the user.                                            *
  *  Argument                                                *
  *      personInfo - pointer that point to personInfo stuct *
@@ -395,15 +395,15 @@ void shapePreEdit(PERSONALINFORMATION_T* personInfo)
 	retval = chooseYesNo();
 	if(retval=1)
 		{
-		strcpy(personInfo->shape,shape[choose-1]);	
+		strcpy(personInfo->shape,shape[choose-1]);
 		printf("New height is %s\n",personInfo->shape);
 		}
 	else
-		printf("Cancel edit shape\n");	
+		printf("Cancel edit shape\n");
 }
 
 /************************************************************
- *	    This function will ask user to choose skin color    *      
+ *	    This function will ask user to choose skin color    *
  *	of the user.                                            *
  *  Argument                                                *
  *      personInfo - pointer that point to personInfo stuct *
@@ -416,7 +416,7 @@ void skinColorPreEdit(PERSONALINFORMATION_T* personInfo)
 	retval = chooseYesNo();
 	if(retval=1)
 		{
-		strcpy(personInfo->skinColor,skinColor[choose-1]);	
+		strcpy(personInfo->skinColor,skinColor[choose-1]);
 		printf("New skin color is %s\n",personInfo->shape);
 		}
 	else
@@ -424,7 +424,7 @@ void skinColorPreEdit(PERSONALINFORMATION_T* personInfo)
 }
 
 /************************************************************
- *	    This function will ask user have tattoo or not      *      
+ *	    This function will ask user have tattoo or not      *
  *  Argument                                                *
  *      personInfo - pointer that point to personInfo stuct *
  ***********************************************************/
@@ -436,13 +436,13 @@ void tattooPreEdit(PERSONALINFORMATION_T* personInfo)
 	tattooPre(personInfo);
 	retval = chooseYesNo();
 	if(retval=1)
-		sscanf(input,"%c",&personInfo->tattoo);	
+		sscanf(input,"%c",&personInfo->tattoo);
 	else
 		printf("Cancel edit tattoo\n");
 }
 
 /************************************************************
- *	    This function will ask user to choose pros          *      
+ *	    This function will ask user to choose pros          *
  *	of the user.                                            *
  *  Argument                                                *
  *      personInfo - pointer that point to personInfo stuct *
@@ -455,7 +455,7 @@ void prosPreEdit(PERSONALINFORMATION_T* personInfo)
 	retval = chooseYesNo();
 	if(retval=1)
 		{
-		strcpy(personInfo->pros,pros[choose-1]);	
+		strcpy(personInfo->pros,pros[choose-1]);
 		printf("New pros is %s\n",personInfo->pros);
 		}
 	else
@@ -463,7 +463,7 @@ void prosPreEdit(PERSONALINFORMATION_T* personInfo)
 }
 
 /************************************************************
- *	    This function will ask user to choose cons          *      
+ *	    This function will ask user to choose cons          *
  *	of the user.                                            *
  *  Argument                                                *
  *      personInfo - pointer that point to personInfo stuct *
@@ -476,7 +476,7 @@ void consPreEdit(PERSONALINFORMATION_T* personInfo)
 	retval = chooseYesNo();
 	if(retval=1)
 		{
-		strcpy(personInfo->cons,cons[choose-1]);	
+		strcpy(personInfo->cons,cons[choose-1]);
 		printf("New cons is %s\n",personInfo->cons);
 		}
 	else
@@ -484,7 +484,7 @@ void consPreEdit(PERSONALINFORMATION_T* personInfo)
 }
 
 /************************************************************
- *	    This function will ask user to choose interest      *      
+ *	    This function will ask user to choose interest      *
  *	of the user.                                            *
  *  Argument                                                *
  *      personInfo - pointer that point to personInfo stuct *
@@ -505,7 +505,7 @@ void interestPreEdit(PERSONALINFORMATION_T* personInfo)
 }
 
 /************************************************************
- *	    This function will ask user smoking or not          *                               
+ *	    This function will ask user smoking or not          *
  *  Argument                                                *
  *      personInfo - pointer that point to personInfo stuct *
  ***********************************************************/
@@ -522,7 +522,7 @@ void smokingPreEdit(PERSONALINFORMATION_T*personInfo)
 }
 
 /************************************************************
- *	    This function will ask drink alcohol or not         * 
+ *	    This function will ask drink alcohol or not         *
  *  Argument                                                *
  *      personInfo - pointer that point to personInfo stuct *
  ***********************************************************/
@@ -539,7 +539,7 @@ void alcoholPreEdit(PERSONALINFORMATION_T* personInfo)
 }
 
 /************************************************************
- *	    This function will ask user like nightlife or not   *     
+ *	    This function will ask user like nightlife or not   *
  *  Argument                                                *
  *      personInfo - pointer that point to personInfo stuct *
  ***********************************************************/
@@ -556,7 +556,7 @@ void nightLifePreEdit(PERSONALINFORMATION_T* personInfo)
 }
 
 /************************************************************
- *	    This function will ask user love pet or not         *                      
+ *	    This function will ask user love pet or not         *
  *  Argument                                                *
  *      personInfo - pointer that point to personInfo stuct *
  ***********************************************************/
@@ -574,7 +574,7 @@ void lovePetsPreEdit(PERSONALINFORMATION_T* personInfo)
 
 /************************************************************
  *	    This function will open the file, show the current  *
- *   user information and edit                              *      
+ *   user information and edit                              *
  *	of the user.                                            *
  ***********************************************************/
 void edit()
@@ -588,28 +588,28 @@ void edit()
 
 	ACCOUNT_T* account = (ACCOUNT_T*)calloc(1,sizeof(ACCOUNT_T));	//Allocate for stuct ACCOUNT_T
 	PERSONALINFORMATION_T* personInfo = (PERSONALINFORMATION_T*)calloc(1,sizeof(PERSONALINFORMATION_T));  //Allocate for stuct PERSONALINFORMATION_T
-		
+
 	if( (account==NULL)||(personInfo==NULL) )
 		{
 		printf("ERROR: Allocate memory failed\n");
 		exit(0);
 		}
-	
+
 	pFile_Ac = fopen("account.txt","a");	//Open the file
 	pFile_MaleInfo = fopen("male_Info.txt","a");	//Open the file
 	pFile_FemaleInfo = fopen("female_Info","a");	//Open the file
-	
+
 	if( (pFile_Ac==NULL)||(pFile_MaleInfo==NULL)||(pFile_FemaleInfo==NULL))
 		{
 		printf("ERROR: Can't open the file\n");
 		exit(0);
 		}
-	
-	if((personInfo->gender)==1)	
+
+	if((personInfo->gender)==1)
 		strcpy(gender,"Male");
 	else
 		strcpy(gender,"Female");
-	
+
 	while(1)
 		{
 		do		/*loop to choose choice to edit*/
@@ -655,13 +655,13 @@ void edit()
 			sscanf(input,"%d",&choice);
 			}
 		while((choice<1) || (choice>27));	/*check user choose only 1-27*/
-		
+
 		/*if user choose 1*/
 		if(choice==1)
-			passwordEdit(account);		
+			passwordEdit(account);
 		/*if user choose 2*/
 		else if(choice==2)
-			nameSurnameAccountIntEdit(personInfo));		
+			nameSurnameAccountIntEdit(personInfo));
 		/*if user choose 3*/
 		else if(choice==3)
 			nicknameIntEdit(personInfo);
@@ -735,20 +735,20 @@ void edit()
 		else if(choice==26)
 			lovePetsPreEdit(personInfo);
 		/*if user choose 27*/
-		else 
+		else
 			{
 			printf("EXIT\n");		/*go back to main*/
 			break;
-			}	
+			}
 		}
 	fprintf(pFile_Ac,"%s %s\n",account->username,account->password);
-	
+
 	if(personInfo->gender==1)
 	fprintf(pFile_MaleInfo,"%s\n%s\n%s\n%s\n%s\n%d\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%d\n%s\n%s\n%c\n%s\n%s\n%s\n%c\n%c\n%c\n%c\n\n",personInfo->name,personInfo->surname,personInfo->nickname,personInfo->telNumber,personInfo->email,personInfo->gender,personInfo->birthdate,personInfo->nationality,personInfo->religion,personInfo->firstLanguage,personInfo->education,personInfo->city,personInfo->occupation,personInfo->netIncome,personInfo->maritalStatus,personInfo->children,personInfo->height,personInfo->shape,personInfo->skinColor,personInfo->tattoo,personInfo->pros,personInfo->cons,personInfo->interest,personInfo->smoking,personInfo->alcohol,personInfo->nightLife,personInfo->lovePets);    /*Write into file male_Info*/
-	else if(personInfo->gender==2)  
+	else if(personInfo->gender==2)
 	fprintf(pFile_FemaleInfo,"%s\n%s\n%s\n%s\n%s\n%d\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%d\n%s\n%s\n%c\n%s\n%s\n%s\n%c\n%c\n%c\n%c\n\n",personInfo->name,personInfo->surname,personInfo->nickname,personInfo->telNumber,personInfo->email,personInfo->gender,personInfo->birthdate,personInfo->nationality,personInfo->religion,personInfo->firstLanguage,personInfo->education,personInfo->city,personInfo->occupation,personInfo->netIncome,personInfo->maritalStatus,personInfo->children,personInfo->height,personInfo->shape,personInfo->skinColor,personInfo->tattoo,personInfo->pros,personInfo->cons,personInfo->interest,personInfo->smoking,personInfo->alcohol,personInfo->nightLife,personInfo->lovePets);    /*Write into file female_Info*/
-	
-	fclose(pFile_Ac);   //Close file account.txt 
+
+	fclose(pFile_Ac);   //Close file account.txt
 	fclose(pFile_MaleInfo); //Close file male_Info.txt
 	fclose(pFile_FemaleInfo);   //Close file female_Info.txt
 	free(account);  //free memory
