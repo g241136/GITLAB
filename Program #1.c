@@ -27,7 +27,7 @@ int chooseNoYes()
 	char sure;
 	do
 		{
-		printf("Are you sured to change this data?(' A ' or ' B '): ");
+		printf("Are you sured to change this data?(' A ' or ' Y '): ");
 		fgets(input,MAXINPUT,stdin);
 		sscanf(input,"%c",&sure);
 		}
