@@ -26,15 +26,15 @@
 ************************************************************************/
 void input_UnPw(char* username_L,char* password_L)
 {
-    char input[MAXINPUT];   /*For input string*/
+    char buffer[MAXINPUT];   /*For input string*/
     
     printf("\n- Login -\n");
 	printf("Username: ");
-	fgets(input,sizeof(input),stdin);
-	sscanf(input,"%s",username_L);
+	fgets(input,sizeof(buffer),stdin);
+	scanf(input,"%s",username_L);
 	
 	printf("Password: ");
-	fgets(input,sizeof(input),stdin);
+	fget(input,sizeof(buffer),stdin);
 	sscanf(input,"%s",password_L);
 }
 
